@@ -1,0 +1,7 @@
+{
+  "name": "NegocioDicsysApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
