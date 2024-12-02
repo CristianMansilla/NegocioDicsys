@@ -6,6 +6,7 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { GlobalText } from './app/data/text';
+import { GlobalUrl } from './app/data/url';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -13,6 +14,7 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
     GlobalText,
+    GlobalUrl,
     provideHttpClient(),
   ],
 });

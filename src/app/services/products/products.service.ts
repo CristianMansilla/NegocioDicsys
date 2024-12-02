@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { GlobalUrl } from 'src/app/data/url';
 
 export interface Product{
   id:string;
@@ -18,7 +19,9 @@ type ApiResponse = Product[];
   providedIn: 'root'
 })
 export class ProductsService {
-  private urlProductsByCategory = 'http://localhost:5000/api/productos/categorias/';
+  globalUrl = inject(GlobalUrl);
+
+  private urlProductsByCategory = this.globalUrl.endpoint+this.globalUrl.productsByCategories; //http://localhost:5000/api/productos/categorias/
 
   httpClient = inject(HttpClient);
 

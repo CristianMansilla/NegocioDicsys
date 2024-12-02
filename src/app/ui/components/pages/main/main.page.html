@@ -13,14 +13,14 @@
       </ion-label>
     </ion-list-header>
     @for(category of categories; track category.id) {
-    <ion-item>
+    <div class="center-content">
       <app-button
         [text]="category.nombre"
         [class]="'category-button'"
         (click)="navegateProducts(category)"
       >
       </app-button>
-    </ion-item>
+    </div>
     }
   </ion-list>
 </ion-content>

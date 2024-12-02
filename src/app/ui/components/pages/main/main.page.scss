@@ -5,11 +5,12 @@ ion-list-header h2 {
     padding-left: 16px;
 }
 
-ion-item {
-    padding: 0;
-    margin-bottom: 12px;
+.center-content {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
 }
-
 
 
 ion-list {
