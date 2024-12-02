@@ -8,6 +8,7 @@ Profesor: Carlos Velasquez 😎
 - Estructura de carpetas
 - Global Text
 - Global Url
+- Pipes
 - Servicios
 - Componentes
     - Páginas
