@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
+import { SplashComponent } from './ui/components/pages/splash/splash.component';
+
 
 export const routes: Routes = [
+  { path: '', component: SplashComponent },
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    path: 'main',
+    loadComponent: () => import('./ui/components/pages/main/main.page').then( m => m.MainPage)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: 'products',
+    loadComponent: () => import('./ui/components/pages/products/products.page').then( m => m.ProductsPage)
   },
 ];

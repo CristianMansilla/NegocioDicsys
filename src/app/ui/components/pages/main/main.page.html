@@ -1,0 +1,26 @@
+<app-header
+  [title]="globalText.dashboard"
+  [showIcon]="true"
+  [iconClass]="'fa-solid fa-cart-shopping'"
+>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <h2>{{ globalText.categories }}</h2>
+      </ion-label>
+    </ion-list-header>
+    @for(category of categories; track category.id) {
+    <ion-item>
+      <app-button
+        [text]="category.nombre"
+        [class]="'category-button'"
+        (click)="navegateProducts(category)"
+      >
+      </app-button>
+    </ion-item>
+    }
+  </ion-list>
+</ion-content>

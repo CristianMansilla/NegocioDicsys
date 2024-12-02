@@ -1,0 +1,14 @@
+<ion-button 
+  *ngIf="!hide"
+  [fill]="fill"
+  [ngClass]="ngClass"
+  expand="full" 
+  [class]="class"
+  [disabled]="disabled"
+  [type]="type"
+>
+  <div class="contentAlign">
+    {{text}}
+    <img *ngIf="showIcon" [src]="iconUrl" alt="" [class]="iconClass">
+  </div>
+</ion-button>

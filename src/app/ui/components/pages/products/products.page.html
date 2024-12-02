@@ -1,0 +1,31 @@
+<app-header
+  [title]="categoryName"
+  [showIcon]="true"
+  [iconClass]="'fa-solid fa-cart-shopping'"
+>
+</app-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <h2>{{ globalText.products }}:</h2>
+      </ion-label>
+    </ion-list-header>
+
+    @for(product of products; track product.id) {
+      <app-card
+      [title]='product.nombre'
+      [image]='product.imagen'
+      [titleCardContent1]='globalText.price'
+      [textCardContent1]='product.precio'
+      [titleCardContent2]='globalText.stock'
+      [textCardContent2]='product.stock.toString()'
+      [titleCardContent3]='globalText.expirationDate'
+      [textCardContent3]='product.fecha_vencimiento'
+      >
+      </app-card>
+    }
+  </ion-list>
+</ion-content>
