@@ -18,7 +18,6 @@ Profesor: Carlos Velasquez 😎
 <br>
 
 
-Capturas:
 ## Capturas
 
 
